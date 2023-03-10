@@ -13,6 +13,12 @@ const SectionWrapper = (Components, idName) => function HOC() {
         viewport={{ once: true, amount:0.25 }}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
         >
+            {idName == 'about' ? (
+            <span className='hash-span h-20' style={{ marginTop:'-55px' }} id={idName}>&nbsp;</span>
+
+            ) : (
+                <span className='hash-span' id={idName}>&nbsp;</span>
+            ) }
             <span className='hash-span' id={idName}>&nbsp;</span>
             <Components/>
         </motion.section>
